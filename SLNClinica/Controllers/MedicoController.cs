@@ -51,9 +51,8 @@ namespace SLNClinica.Controllers
             }
             else
             {
-                return View("detalle", medico);
+                return View("Details", medico);
             }
-
         }
 
         private Medico TraerUna(int id)
@@ -111,18 +110,11 @@ namespace SLNClinica.Controllers
 
         [ActionName("Edit")]
         [HttpPost]
-        public ActionResult EditConfirmed(int id)
+        public ActionResult EditConfirmed(Medico medico)
         {
-
-            Medico medico = TraerUna(id);
-            if (id != medico.Id)
-            {
-                return BadRequest();
-            }
 
             context.Entry(medico).State = EntityState.Modified;
             context.SaveChanges();
-
             return RedirectToAction("Index");
         }
 

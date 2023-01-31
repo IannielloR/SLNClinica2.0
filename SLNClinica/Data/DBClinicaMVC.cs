@@ -9,5 +9,6 @@ namespace SLNClinica.Data
 
 
         public DbSet<Medico> Medicos { get; set; }
+
     }
 }

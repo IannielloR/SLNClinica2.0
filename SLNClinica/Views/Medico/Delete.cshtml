@@ -1,0 +1,31 @@
+﻿@model SLNClinica.Models.Medico
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h2>@Model.Nombre @Model.Apellido</h2>
+    <p>Desea eliminar este medico?</p>
+
+    @using (Html.BeginForm("Delete", "Medico", FormMethod.Post))
+    {
+            <div>
+                <span>@Html.DisplayNameFor(model=>model.Apellido)</span>
+                <span>@Html.DisplayFor(model=>model.Apellido)</span>
+            </div>
+            <div>
+                <span>@Html.DisplayNameFor(model=>model.Matricula)</span>
+                <span>@Html.DisplayFor(model=>model.Matricula)</span>
+            </div>
+            <input type="submit" action="Delete"  />
+
+        @Html.ActionLink("Volver", "Index", "Medico")
+    }
+
+</body>
+</html>
+

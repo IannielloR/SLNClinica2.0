@@ -37,7 +37,7 @@ namespace SLNClinica
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Medico/Error");
             }
             app.UseStaticFiles();
 
@@ -49,7 +49,7 @@ namespace SLNClinica
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Medico}/{action=Create}/{id?}");
             });
         }
     }
