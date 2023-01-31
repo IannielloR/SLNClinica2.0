@@ -25,7 +25,7 @@ namespace SLNClinica.Controllers
         {
             Medico medico = new Medico();
 
-            return View("Create", medico);
+            return View("Register", medico);
         }
 
         //post: Opera/Create
@@ -120,3 +120,5 @@ namespace SLNClinica.Controllers
 
     }
 }
+
+
