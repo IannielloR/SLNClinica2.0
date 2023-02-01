@@ -1,13 +1,8 @@
 ﻿@model SLNClinica.Models.Medico
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
+@{
+    ViewData["Title"] = "Edit";
+}
 
     <h1>Registrar Medico</h1>
     @using (Html.BeginForm("Edit", "Medico", FormMethod.Post))
@@ -36,6 +31,3 @@
         @Html.ActionLink("Ver medicos creados", "Index", "Edit")
 
     }
-
-</body>
-</html>
